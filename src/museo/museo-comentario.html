@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STC Metro | Blog Histórico</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence:SCAN@-22&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+  <div class="crt-container">
+    <header id="header">
+      <a href="../../index.html" class="main-title-item">
+        <h1>STC METRO CDMX</h1>
+      </a>
+      <h2 id="second-title">Navegación Histórica: El Corazón Subterráneo</h2>
+    </header>
+
+    <!-- Menú horizontal -->
+    <nav id="horizontal-menu">
+      <a href="../historia/historia-actualidad.html" class="menu-item-h">Historia</a>
+      <a href="../linea1/linea1-estaciones.html" class="menu-item-h">Línea 1</a>
+      <a href="../linea2/linea2-estaciones.html" class="menu-item-h">Línea 2</a>
+      <a href="../linea3/linea3-estaciones.html" class="menu-item-h">Línea 3</a>
+      <a href="museo-historia.html" class="menu-item-h">Museo</a>
+    </nav>
+
+    <main id="main-layout">
+      <!-- ------------------------------ PÁGINA: MUSEO / COMENTARIO (FORMULARIO) ------------------------------ -->
+            <div id="page-museo-comentario" class="content-page">
+                <h2>¡Déjanos tu Comentario!</h2>
+                <p style="margin-bottom: 1rem;">¿Tienes alguna anécdota o pregunta sobre la historia del Metro? ¡Compártela con nosotros!</p>
+                <!-- Formulario sin JS - El submit cambia el hash a #message-success, simulando el envío -->
+                <form action="#message-success" method="get">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="name" style="display: block; color: var(--primary-color);">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="comment" style="display: block; color: var(--primary-color);">Comentario:</label>
+                        <textarea id="comment" name="comment" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">
+                        Enviar Comentario
+                    </button>
+                </form>
+            </div>
+            
+            <!-- ------------------------------ MENSAJE DE CONFIRMACIÓN (TARGET) ------------------------------ -->
+            <div id="message-success" class="content-page">
+                <h2>Mensaje de Confirmación</h2>
+                <p style="margin-top: 1rem; border: 1px solid var(--primary-color); padding: 1rem; text-align: center;">
+                    ¡Gracias! Tu comentario ha sido enviado al servidor central de datos (simulado). 
+                    <a href="#page-museo-comentario" style="float: right; color: var(--text-color); margin-left: 10px;">[Volver]</a>
+                </p>
+                <img src="https://placehold.co/600x150/0d0d0d/f70a7b?text=Confirmación+Enviada" alt="Mensaje de confirmación de envío.">
+            </div>
+
+      <!-- Menú lateral -->
+      <aside id="vertical-menu">
+        <div class="menu-section" style="margin-top: 1.5rem;">
+          <h3>Museo</h3>
+          <a href="museo-ubicacion.html" class="menu-item-v">>> Ubicación y Acceso</a>
+          <a href="museo-historia.html" class="menu-item-v">>> Historia del Museo</a>
+          <a href="museo-comentario.html" class="menu-item-v">>> Comentarios</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2024 STC Metro Blog Histórico | HTML y CSS puro.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

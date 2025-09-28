@@ -1,0 +1,282 @@
+/* Variables y Reset Básico */
+:root {
+    --primary-color: #f70a7b;
+    /* Rosa/magenta del metro */
+    --secondary-color: #000000;
+    --text-color: #e5e7eb;
+    --bg-color: #0d0d0d;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos Retro/CRT */
+.crt-container {
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    background-color: #1a1a1a;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Sixtyfour Convergence', monospace;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#second-title {
+    font-family: 'Inter', sans-serif;
+    text-shadow: none;
+    color: #aaa;
+}
+
+/* --- 1a) HEADER --- */
+#header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* --- 1c) MENÚ HORIZONTAL (FLEXBOX) --- */
+#horizontal-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    gap: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.main-title-item {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.2s;
+}
+
+.menu-item-h {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 0.375rem;
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.2s;
+}
+
+.menu-item-h:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* --- MAIN LAYOUT (CSS GRID) --- */
+#main-layout {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    #main-layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: "sidebar content";
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .content-page {
+        grid-area: content;
+    }
+
+    #vertical-menu {
+        grid-area: sidebar;
+    }
+}
+
+/* --- 1d) MENÚ VERTICAL (SIDEBAR) --- */
+#vertical-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    z-index: 10;
+}
+
+.menu-item-v {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 0.375rem;
+    margin-top: 0.25rem;
+    transition: all 0.2s;
+}
+
+.menu-item-v:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+/* Oculta los submenús por defecto, se muestran en cada página 
+.menu-section {
+    display: none;
+}*/
+
+/* ------------------------------------------------------------- */
+/* --- ESTILOS DE LOS ELEMENTOS HTML --- */
+/* ------------------------------------------------------------- */
+.content-page {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 10px rgba(247, 10, 123, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--primary-color);
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(247, 10, 123, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: 2px solid var(--primary-color);
+}
+
+ul,
+ol {
+    margin: 1rem 0 1rem 1.5rem;
+    list-style-position: inside;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario */
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--primary-color);
+    background-color: #000;
+    color: var(--text-color);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff3a9e;
+}
+
+/* ------------------------------------------------------------- */
+/* --- ARREGLO DE VISIBILIDAD DE CONTENIDO CON :TARGET --- */
+/* ------------------------------------------------------------- */
+
+/* 1. Ocultamos todos los elementos de contenido por defecto */
+#message-success {
+    display: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 10px rgba(247, 10, 123, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Estilo de fondo aplicado directamente a la página */
+    margin-top: 0;
+}
+
+/* 2. Muestra solo el contenido cuya ID coincide con el hash de la URL (:target) */
+#message-success:target {
+    display: block;
+    padding: 1rem;
+    background-color: rgba(247, 10, 123, 0.3);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+/* 1b) FOOTER */
+#footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    border-top: 4px solid var(--primary-color);
+    margin-top: auto;
+}

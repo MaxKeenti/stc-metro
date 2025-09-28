@@ -8,69 +8,83 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence:SCAN@-22&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence:SCAN@-22&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <div class="crt-container">
     <header id="header">
-      <h1 class="text-center">STC METRO CDMX</h1>
-      <h2 style="font-family: 'Inter', sans-serif; text-shadow: none; color: #aaa; text-align: center;">Navegación Histórica: El Corazón Subterráneo</h2>
+      <a href="index.html" class="main-title-item">
+        <h1>STC METRO CDMX</h1>
+      </a>
+      <h2 id="second-title">Navegación Histórica: El Corazón Subterráneo</h2>
     </header>
 
     <!-- Menú horizontal -->
     <nav id="horizontal-menu">
-      <a href="historia-antes.html" class="menu-item-h">Historia</a>
-      <a href="linea1-estaciones.html" class="menu-item-h">Línea 1</a>
-      <a href="linea2-estaciones.html" class="menu-item-h">Línea 2</a>
-      <a href="linea3-estaciones.html" class="menu-item-h">Línea 3</a>
-      <a href="museo-ubicacion.html" class="menu-item-h">Museo</a>
+      <a href="src/historia/historia-actualidad.html" class="menu-item-h">Historia</a>
+      <a href="src/linea1/linea1-estaciones.html" class="menu-item-h">Línea 1</a>
+      <a href="src/linea2/linea2-estaciones.html" class="menu-item-h">Línea 2</a>
+      <a href="src/linea3/linea3-estaciones.html" class="menu-item-h">Línea 3</a>
+      <a href="src/museo/museo-historia.html" class="menu-item-h">Museo</a>
     </nav>
 
     <main id="main-layout">
       <!-- Aquí va el contenido único de cada página -->
-      <section class="content-page">
-        <h2>Ejemplo Base</h2>
-        <p>Este archivo es la plantilla base. Copia este layout en tus páginas y cambia el contenido dentro de &lt;section&gt;.</p>
-      </section>
+      <div class="content-page">
+        <h2>Bienvenido</h2>
+        <p style="margin-bottom: 1rem;">
+          Explora la historia, las líneas y los datos curiosos del Sistema de Transporte Colectivo (STC) Metro de la
+          Ciudad de México. Este sitio es un homenaje a uno de los sistemas de transporte masivo más emblemáticos del
+          mundo.
+        </p>
+        <img src="https://placehold.co/600x350/0d0d0d/f70a7b?text=El+Metro+de+la+CDMX"
+          alt="Imagen del Metro de la Ciudad de México">
+        <p>
+          Utiliza el menú superior para navegar a través de las diferentes secciones y sumérgete en el corazón
+          subterráneo de la ciudad.
+        </p>
+      </div>
 
       <!-- Menú lateral -->
       <aside id="vertical-menu">
         <div class="menu-section">
           <h3>Historia</h3>
-          <a href="historia-antes.html" class="menu-item-v">>> Antes de la Construcción</a>
-          <a href="historia-durante.html" class="menu-item-v">>> La Construcción y Desafíos</a>
-          <a href="historia-actualidad.html" class="menu-item-v">>> Actualidad y Expansión</a>
+          <a href="src/historia/historia-antes.html" class="menu-item-v">>> Antes de la Construcción</a>
+          <a href="src/historia/historia-durante.html" class="menu-item-v">>> La Construcción y Desafíos</a>
+          <a href="src/historia/historia-actualidad.html" class="menu-item-v">>> Actualidad y Expansión</a>
         </div>
 
         <div class="menu-section" style="margin-top: 1.5rem;">
           <h3>Línea 1</h3>
-          <a href="linea1-estaciones.html" class="menu-item-v">>> Estaciones</a>
-          <a href="linea1-historia.html" class="menu-item-v">>> Historia</a>
-          <a href="linea1-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
+          <a href="src/linea1/linea1-estaciones.html" class="menu-item-v">>> Estaciones</a>
+          <a href="src/linea1/linea1-historia.html" class="menu-item-v">>> Historia</a>
+          <a href="src/linea1/linea1-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
         </div>
 
         <div class="menu-section" style="margin-top: 1.5rem;">
           <h3>Línea 2</h3>
-          <a href="linea2-estaciones.html" class="menu-item-v">>> Estaciones</a>
-          <a href="linea2-historia.html" class="menu-item-v">>> Historia</a>
-          <a href="linea2-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
+          <a href="src/linea2/linea2-estaciones.html" class="menu-item-v">>> Estaciones</a>
+          <a href="src/linea2/linea2-historia.html" class="menu-item-v">>> Historia</a>
+          <a href="src/linea2/linea2-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
         </div>
 
         <div class="menu-section" style="margin-top: 1.5rem;">
           <h3>Línea 3</h3>
-          <a href="linea3-estaciones.html" class="menu-item-v">>> Estaciones</a>
-          <a href="linea3-historia.html" class="menu-item-v">>> Historia</a>
-          <a href="linea3-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
+          <a href="src/linea3/linea3-estaciones.html" class="menu-item-v">>> Estaciones</a>
+          <a href="src/linea3/linea3-historia.html" class="menu-item-v">>> Historia</a>
+          <a href="src/linea3/linea3-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
         </div>
 
         <div class="menu-section" style="margin-top: 1.5rem;">
           <h3>Museo</h3>
-          <a href="museo-ubicacion.html" class="menu-item-v">>> Ubicación y Acceso</a>
-          <a href="museo-historia.html" class="menu-item-v">>> Historia del Museo</a>
-          <a href="museo-comentario.html" class="menu-item-v">>> Comentarios</a>
+          <a href="src/museo/museo-ubicacion.html" class="menu-item-v">>> Ubicación y Acceso</a>
+          <a href="src/museo/museo-historia.html" class="menu-item-v">>> Historia del Museo</a>
+          <a href="src/museo/museo-comentario.html" class="menu-item-v">>> Comentarios</a>
         </div>
       </aside>
     </main>
@@ -80,4 +94,5 @@
     </footer>
   </div>
 </body>
+
 </html>
