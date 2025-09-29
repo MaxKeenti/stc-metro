@@ -36,11 +36,11 @@
     <main id="main-layout">
       <!-- ------------------------------ PÁGINA: MUSEO / COMENTARIO (FORMULARIO) ------------------------------ -->
             <div id="page-museo-comentario" class="content-page">
-                <h2>¡Déjanos tu Comentario!</h2>
+                <h2 id="comment-title">¡Déjanos tu Comentario!</h2>
                 <p style="margin-bottom: 1rem;">¿Tienes alguna anécdota o pregunta sobre la historia del Metro? ¡Compártela con nosotros!</p>
                 <!-- Formulario sin JS - El submit cambia el hash a #message-success, simulando el envío -->
                 <form action="#message-success" method="get">
-                    <div style="margin-bottom: 1rem;">
+                    <div style="margin-bottom: 3rem;">
                         <label for="name" style="display: block; color: var(--primary-color);">Nombre:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
@@ -61,7 +61,7 @@
                     ¡Gracias! Tu comentario ha sido enviado al servidor central de datos (simulado). 
                     <a href="#page-museo-comentario" style="float: right; color: var(--text-color); margin-left: 10px;">[Volver]</a>
                 </p>
-                <img src="https://placehold.co/600x150/0d0d0d/f70a7b?text=Confirmación+Enviada" alt="Mensaje de confirmación de envío.">
+                <img src="https://placehold.co/600x150/0d0d0d/ffbf00?text=Confirmación+Enviada" alt="Mensaje de confirmación de envío.">
             </div>
 
       <!-- Menú lateral -->
