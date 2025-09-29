@@ -310,7 +310,7 @@ tr:hover {
 }
 
 img {
-    max-width: 100%;
+    max-width: 16rem;
     height: auto;
     display: block;
     margin: 1rem auto;
