@@ -148,6 +148,10 @@ h3 {
     text-align: center;
 }
 
+h3 {
+    margin-top: 0;
+}
+
 h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
@@ -269,10 +273,9 @@ h4 {
     font-weight: bold;
 }
 
-/* Oculta los submenús por defecto, se muestran en cada página 
 .menu-section {
-    display: none;
-}*/
+    margin-top: 1.5rem;
+}
 
 /* ------------------------------------------------------------- */
 /* --- ESTILOS DE LOS ELEMENTOS HTML --- */
@@ -285,11 +288,36 @@ h4 {
     margin-top: 0;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
+#p-msg-success {
+    margin-top: 1rem; 
+    border: 1px solid var(--primary-color); 
+    padding: 1rem; 
+    text-align: center;
+}
+
+#a-msg-success {
+    float: right; 
+    color: var(--text-color); 
+    margin-left: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.td-bold {
+    font-weight: bold;
 }
 
 th,
@@ -318,10 +346,18 @@ img {
     border: 2px solid var(--primary-color);
 }
 
+ul {
+    list-style-type: disc;
+}
+
 ul,
 ol {
     margin: 1rem 0 1rem 1.5rem;
     list-style-position: inside;
+}
+
+#ol-lista-lineas {
+    list-style-type: decimal;
 }
 
 li {
@@ -363,16 +399,29 @@ button[type="submit"]:hover {
     background-color: var(--crt-glow-color);
 }
 
+.form-div {
+    margin-bottom: 3rem;
+}
+
+.form-label {
+    display: block; 
+    color: var(--primary-color);
+}
+
+.form-div + div{
+    margin-bottom: 1rem;
+}
+
 /* ------------------------------------------------------------- */
 /* --- ARREGLO DE VISIBILIDAD DE CONTENIDO CON :TARGET --- */
 /* ------------------------------------------------------------- */
 
-/* 1. Ocultamos todos los elementos de contenido por defecto */
+/* 1. Se ocultan todos los elementos de contenido por defecto */
 #message-success {
     display: none;
 }
 
-/* 2. Muestra solo el contenido cuya ID coincide con el hash de la URL (:target) */
+/* 2. Se muestra solo el contenido cuya ID coincide con el hash de la URL (:target) */
 #message-success:target {
     display: block;
     padding: 5rem;

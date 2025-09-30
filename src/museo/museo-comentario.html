@@ -37,15 +37,15 @@
       <!-- ------------------------------ PÁGINA: MUSEO / COMENTARIO (FORMULARIO) ------------------------------ -->
             <div id="page-museo-comentario" class="content-page">
                 <h2 id="comment-title">¡Déjanos tu Comentario!</h2>
-                <p style="margin-bottom: 1rem;">¿Tienes alguna anécdota o pregunta sobre la historia del Metro? ¡Compártela con nosotros!</p>
+                <p>¿Tienes alguna anécdota o pregunta sobre la historia del Metro? ¡Compártela con nosotros!</p>
                 <!-- Formulario sin JS - El submit cambia el hash a #message-success, simulando el envío -->
                 <form action="#message-success" method="get">
-                    <div style="margin-bottom: 3rem;">
-                        <label for="name" style="display: block; color: var(--primary-color);">Nombre:</label>
+                    <div class="form-div">
+                        <label class="form-label" for="name">Nombre:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label for="comment" style="display: block; color: var(--primary-color);">Comentario:</label>
+                    <div>
+                        <label class="form-label" for="comment">Comentario:</label>
                         <textarea id="comment" name="comment" rows="4" required></textarea>
                     </div>
                     <button type="submit" id="submit-btn">
@@ -57,16 +57,16 @@
             <!-- ------------------------------ MENSAJE DE CONFIRMACIÓN (TARGET) ------------------------------ -->
             <div id="message-success" class="content-page">
                 <h2>Mensaje de Confirmación</h2>
-                <p style="margin-top: 1rem; border: 1px solid var(--primary-color); padding: 1rem; text-align: center;">
+                <p id="p-msg-success">
                     ¡Gracias! Tu comentario ha sido enviado al servidor central de datos (simulado). 
-                    <a href="#page-museo-comentario" style="float: right; color: var(--text-color); margin-left: 10px;">[Volver]</a>
+                    <a href="#page-museo-comentario" id="a-msg-success">[Volver]</a>
                 </p>
                 <img src="https://placehold.co/600x150/0d0d0d/ffbf00?text=Confirmación+Enviada" alt="Mensaje de confirmación de envío.">
             </div>
 
       <!-- Menú lateral -->
       <aside id="vertical-menu">
-        <div class="menu-section" style="margin-top: 1.5rem;">
+        <div class="menu-section">
           <h3>Museo</h3>
           <a href="museo-ubicacion.html" class="menu-item-v">>> Ubicación y Acceso</a>
           <a href="museo-historia.html" class="menu-item-v">>> Historia del Museo</a>
