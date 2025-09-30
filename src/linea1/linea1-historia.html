@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STC Metro | Blog Histórico</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STC Metro | Blog Histórico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence:SCAN@-22&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence:SCAN@-22&family=Inter:wght@400;700&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="../../css/styles.css">
-</head>
+  <body>
+    <div class="crt-container">
+      <header id="header">
+        <a href="../../index.html" class="main-title-item">
+          <h1>STC METRO CDMX</h1>
+        </a>
+        <h2 id="second-title">Navegación Histórica: El Corazón Subterráneo</h2>
+      </header>
 
-<body>
-  <div class="crt-container">
-    <header id="header">
-      <a href="../../index.html" class="main-title-item">
-        <h1>STC METRO CDMX</h1>
-      </a>
-      <h2 id="second-title">Navegación Histórica: El Corazón Subterráneo</h2>
-    </header>
+      <!-- Menú horizontal -->
+      <nav id="horizontal-menu">
+        <a href="../historia/historia-actualidad.html" class="menu-item-h"
+          >Historia</a
+        >
+        <a href="linea1-estaciones.html" class="menu-item-h">Línea 1</a>
+        <a href="../linea2/linea2-estaciones.html" class="menu-item-h"
+          >Línea 2</a
+        >
+        <a href="../linea3/linea3-estaciones.html" class="menu-item-h"
+          >Línea 3</a
+        >
+        <a href="../museo/museo-historia.html" class="menu-item-h">Museo</a>
+      </nav>
 
-    <!-- Menú horizontal -->
-   <nav id="horizontal-menu">
-            <a href="../historia/historia-actualidad.html" class="menu-item-h">Historia</a>
-            <a href="linea1-estaciones.html" class="menu-item-h">Línea 1</a>
-            <a href="../linea2/linea2-estaciones.html" class="menu-item-h">Línea 2</a>
-            <a href="../linea3/linea3-estaciones.html" class="menu-item-h">Línea 3</a>
-            <a href="../museo/museo-historia.html" class="menu-item-h">Museo</a>
-        </nav>
+      <main id="main-layout">
+        <div id="page-linea1-historia" class="content-page">
+          <h2>Historia de la Línea 1</h2>
+          <p>
+            La Línea 1 es la fundadora del sistema. Su construcción enfrentó
+            grandes retos, incluyendo la estabilización del subsuelo para el
+            tramo subterráneo. Fue inaugurada en varias etapas, comenzando en
+            1969.
+          </p>
+          <p>
+            Actualmente se encuentra en un proceso de **modernización total**,
+            renovando vías, trenes y sistemas de control para garantizar su
+            operación por al menos 50 años más. Es un hito en la historia del
+            Metro.
+          </p>
+          <img
+            src="../../img/linea1.jpg"
+            alt="Croquis de la Línea 2 del Metro de la Ciudad de México"
+          />
+        </div>
 
-    <main id="main-layout">
-      <div id="page-linea1-historia" class="content-page">
-                <h2>Historia de la Línea 1</h2>
-                <p>La Línea 1 es la fundadora del sistema. Su construcción enfrentó grandes retos, incluyendo la estabilización del subsuelo para el tramo subterráneo. Fue inaugurada en varias etapas, comenzando en 1969.</p>
-                <p>Actualmente se encuentra en un proceso de **modernización total**, renovando vías, trenes y sistemas de control para garantizar su operación por al menos 50 años más. Es un hito en la historia del Metro.</p>
-                <img src="../../img/linea1.jpg" alt="Croquis de la Línea 2 del Metro de la Ciudad de México">
-            </div>
-            
-      <!-- Menú lateral -->
-      <aside id="vertical-menu">
-        <div class="menu-section">
-                    <h3>Línea 1</h3>
-                    <a href="linea1-estaciones.html" class="menu-item-v">>> Estaciones</a>
-                    <a href="linea1-historia.html" class="menu-item-v">>> Historia</a>
-                    <a href="linea1-curiosos.html" class="menu-item-v">>> Datos Curiosos</a>
-                </div>
-      </aside>
-    </main>
+        <!-- Menú lateral -->
+        <aside id="vertical-menu">
+          <div class="menu-section">
+            <h3>Línea 1</h3>
+            <a href="linea1-estaciones.html" class="menu-item-v"
+              >>> Estaciones</a
+            >
+            <a href="linea1-historia.html" class="menu-item-v">>> Historia</a>
+            <a href="linea1-curiosos.html" class="menu-item-v"
+              >>> Datos Curiosos</a
+            >
+          </div>
+        </aside>
+      </main>
 
-    <footer id="footer">
-      <p>&copy; 2024 STC Metro Blog Histórico | HTML y CSS puro.</p>
-    </footer>
-  </div>
-</body>
-
+      <footer id="footer">
+        <p>&copy; 2024 STC Metro Blog Histórico | HTML y CSS puro.</p>
+      </footer>
+    </div>
+  </body>
 </html>

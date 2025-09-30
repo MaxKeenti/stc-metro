@@ -1,122 +1,127 @@
 /* Variables y Reset Básico */
 :root {
-    --primary-color: #ffbf00;
-    /* Color ámbar */
-    --crt-glow-color: rgba(255, 191, 0, 0.7);
-    /* Color de resplandor */
-    --crt-screen-bg: rgba(0, 0, 0, 0.8);
-    /* Fondo oscuro de la pantalla */
-    --secondary-color: #000000;
-    --text-color: #e5e7eb;
-    --bg-color: #0d0d0d;
-    font-size: 16px;
+  --primary-color: #ffbf00;
+  /* Color ámbar */
+  --crt-glow-color: rgba(255, 191, 0, 0.7);
+  /* Color de resplandor */
+  --crt-screen-bg: rgba(0, 0, 0, 0.8);
+  /* Fondo oscuro de la pantalla */
+  --secondary-color: #000000;
+  --text-color: #e5e7eb;
+  --bg-color: #0d0d0d;
+  font-size: 16px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Estilos Retro/CRT */
 .crt-container {
-    border: 4px solid var(--primary-color);
-    box-shadow: 0 0 15px var(--primary-color);
-    background-color: #1a1a1a;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 0 15px var(--primary-color);
+  background-color: #1a1a1a;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Líneas de exploración (Scanlines) */
 body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom,
-            transparent 50%,
-            var(--crt-screen-bg) 50%);
-    background-size: 100% 4px;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0.1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    var(--crt-screen-bg) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.1;
 }
 
 /* Efecto de ruido */
 body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-        linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.05), rgba(0, 0, 255, 0.05));
-    background-size: 100% 2px, 3px 100%;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.8;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.05),
+      rgba(0, 255, 0, 0.05),
+      rgba(0, 0, 255, 0.05)
+    );
+  background-size: 100% 2px, 3px 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 /* Animación de parpadeo (opcional) */
 @keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
 
-    0%,
-    100% {
-        opacity: 1;
-    }
+  10% {
+    opacity: 0.99;
+  }
 
-    10% {
-        opacity: 0.99;
-    }
+  20% {
+    opacity: 1;
+  }
 
-    20% {
-        opacity: 1;
-    }
+  30% {
+    opacity: 0.98;
+  }
 
-    30% {
-        opacity: 0.98;
-    }
+  40% {
+    opacity: 1;
+  }
 
-    40% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 0.97;
+  }
 
-    50% {
-        opacity: 0.97;
-    }
+  60% {
+    opacity: 1;
+  }
 
-    60% {
-        opacity: 1;
-    }
+  70% {
+    opacity: 0.96;
+  }
 
-    70% {
-        opacity: 0.96;
-    }
+  80% {
+    opacity: 1;
+  }
 
-    80% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 0.95;
-    }
+  90% {
+    opacity: 0.95;
+  }
 }
 
 h1,
@@ -125,8 +130,8 @@ h3,
 h4,
 h5,
 h6 {
-    animation: flicker 0.2s infinite steps(1);
-    /* Parpadeo rápido */
+  animation: flicker 0.2s infinite steps(1);
+  /* Parpadeo rápido */
 }
 
 /* Fin de los estilos Retro/CRT */
@@ -134,282 +139,279 @@ h6 {
 h1,
 h2,
 h3 {
-    font-family: "Sixtyfour Convergence", monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-        "BLED" 0,
-        "SCAN" -22,
-        "XELA" 0,
-        "YELA" 0;
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color), 0 0 20px var(--crt-glow-color), 0 0 40px var(--crt-glow-color);
-    margin-bottom: 0.5rem;
-    text-align: center;
+  font-family: "Sixtyfour Convergence", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" -22, "XELA" 0, "YELA" 0;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color),
+    0 0 20px var(--crt-glow-color), 0 0 40px var(--crt-glow-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
-    text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color);
 }
 
 #second-title {
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
-    text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color);
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0 0 5px var(--crt-glow-color), 0 0 10px var(--crt-glow-color);
 }
 
 /* --- 1a) HEADER --- */
 #header {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    border-bottom: 4px solid var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  border-bottom: 4px solid var(--primary-color);
 }
 
 /* --- 1c) MENÚ HORIZONTAL (FLEXBOX) --- */
 #horizontal-menu {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-    gap: 0.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .main-title-item {
-    flex-grow: 1;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    text-align: center;
-    min-width: 120px;
-    transition: all 0.2s;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  min-width: 120px;
+  transition: all 0.2s;
 }
 
 .menu-item-h {
-    flex-grow: 1;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: var(--text-color);
-    border-radius: 0.375rem;
-    text-align: center;
-    min-width: 120px;
-    transition: all 0.2s;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 0.375rem;
+  text-align: center;
+  min-width: 120px;
+  transition: all 0.2s;
 }
 
 .menu-item-h:hover {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
 }
 
 /* --- MAIN LAYOUT (CSS GRID) --- */
 #main-layout {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
-    #main-layout {
-        display: grid;
-        grid-template-columns: 250px 1fr;
-        grid-template-areas: "sidebar content";
-        gap: 2rem;
-        padding: 1.5rem;
-    }
+  #main-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar content";
+    gap: 2rem;
+    padding: 1.5rem;
+  }
 
-    .content-page {
-        grid-area: content;
-    }
+  .content-page {
+    grid-area: content;
+  }
 
-    #vertical-menu {
-        grid-area: sidebar;
-    }
+  #vertical-menu {
+    grid-area: sidebar;
+  }
 }
 
 /* --- 1d) MENÚ VERTICAL (SIDEBAR) --- */
 #vertical-menu {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    position: sticky;
-    top: 100px;
-    height: fit-content;
-    z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  z-index: 10;
 }
 
 .menu-item-v {
-    display: block;
-    padding: 0.5rem 0.5rem;
-    text-decoration: none;
-    color: var(--text-color);
-    border-radius: 0.375rem;
-    margin-top: 0.25rem;
-    transition: all 0.2s;
+  display: block;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 0.375rem;
+  margin-top: 0.25rem;
+  transition: all 0.2s;
 }
 
 .menu-item-v:hover {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    padding-left: 1rem;
-    font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding-left: 1rem;
+  font-weight: bold;
 }
 
 .menu-section {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 /* ------------------------------------------------------------- */
 /* --- ESTILOS DE LOS ELEMENTOS HTML --- */
 /* ------------------------------------------------------------- */
 .content-page {
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: inset 0 0 10px var(--primary-color);
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 10px var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 0;
 }
 
 p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #p-msg-success {
-    margin-top: 1rem; 
-    border: 1px solid var(--primary-color); 
-    padding: 1rem; 
-    text-align: center;
+  margin-top: 1rem;
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  text-align: center;
 }
 
 #a-msg-success {
-    float: right; 
-    color: var(--text-color); 
-    margin-left: 10px;
+  float: right;
+  color: var(--text-color);
+  margin-left: 10px;
 }
 
 .table-container {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-    background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .td-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 th,
 td {
-    padding: 0.75rem;
-    border-bottom: 1px solid var(--primary-color);
-    text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--primary-color);
+  text-align: left;
 }
 
 th {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: bold;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 tr:hover {
-    background-color: rgba(247, 10, 123, 0.1);
+  background-color: rgba(247, 10, 123, 0.1);
 }
 
 img {
-    max-width: 16rem;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 0.5rem;
-    border: 2px solid var(--primary-color);
+  max-width: 16rem;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
 }
 
 ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 ul,
 ol {
-    margin: 1rem 0 1rem 1.5rem;
-    list-style-position: inside;
+  margin: 1rem 0 1rem 1.5rem;
+  list-style-position: inside;
 }
 
 #ol-lista-lineas {
-    list-style-type: decimal;
+  list-style-type: decimal;
 }
 
 li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Formulario */
 form {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
 }
 
 input[type="text"],
 textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 0.25rem;
-    border-radius: 0.3rem;
-    border: 1px solid var(--primary-color);
-    background-color: #000;
-    color: var(--text-color);
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--primary-color);
+  background-color: #000;
+  color: var(--text-color);
 }
 
 button[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: bold;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
-    background-color: var(--crt-glow-color);
+  background-color: var(--crt-glow-color);
 }
 
 .form-div {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .form-label {
-    display: block; 
-    color: var(--primary-color);
+  display: block;
+  color: var(--primary-color);
 }
 
-.form-div + div{
-    margin-bottom: 1rem;
+.form-div + div {
+  margin-bottom: 1rem;
 }
 
 /* ------------------------------------------------------------- */
@@ -418,25 +420,25 @@ button[type="submit"]:hover {
 
 /* 1. Se ocultan todos los elementos de contenido por defecto */
 #message-success {
-    display: none;
+  display: none;
 }
 
 /* 2. Se muestra solo el contenido cuya ID coincide con el hash de la URL (:target) */
 #message-success:target {
-    display: block;
-    padding: 5rem;
-    background-color: var(--bg-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 0.3rem;
-    text-align: center;
+  display: block;
+  padding: 5rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.3rem;
+  text-align: center;
 }
 
 /* 1b) FOOTER */
 #footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.75rem;
-    border-top: 4px solid var(--primary-color);
-    margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  border-top: 4px solid var(--primary-color);
+  margin-top: auto;
 }
